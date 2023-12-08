@@ -1,6 +1,6 @@
 const ids = [
-  { id: "232789", name: "NEIVA" },
-  { id: "263355", name: "NEVIS" },
+  { id: "232789", name: "NEIVA", img: (country) => "https://beliani.info/newsletter/2022/231211Category11.png" },
+  { id: "263355", name: "NEVIS", img: (country) => "https://beliani.info/newsletter/2022/231211Category12.png" },
 ];
 
 async function parse_response(responses, cbs) {
@@ -200,6 +200,7 @@ async function getProductData(product) {
     } of slaves_prices) {
       if (countryLink === countryPrice) {
         products.push({
+          src: product.img(countryLink),
           name: product.name,
           main_id: product.id,
           country: countryLink,
