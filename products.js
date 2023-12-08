@@ -200,6 +200,7 @@ async function getProductData(product) {
     } of slaves_prices) {
       if (countryLink === countryPrice) {
         products.push({
+          name: product.name,
           main_id: product.id,
           country: countryLink,
           href,
