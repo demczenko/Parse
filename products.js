@@ -200,7 +200,7 @@ async function getProductData(product) {
     } of slaves_prices) {
       if (countryLink === countryPrice) {
         products.push({
-          src: product.img(countryLink),
+          src: typeof product.img === "function" ? product.img(countryLink) : product.img,
           name: product.name,
           main_id: product.id,
           country: countryLink,
