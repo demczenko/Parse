@@ -1,3 +1,4 @@
+const pushed_countries = []
 const result = data.reduce((acc, item) => {
     if (!pushed_countries.includes(item.country)) {
         pushed_countries.push(item.country)
